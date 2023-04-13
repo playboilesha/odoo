@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <record id="view_employee_form_with_iban" model="ir.ui.view">
+      <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr.view_employee_form" />
+      <field name="arch" type="xml">
+        <page name="personal_information" position="after">
+          <page name="iban_page" string="IBAN" groups="hr.group_hr_user">
+            <group>
+              <group name="iban_group" String="IBAN">
+                <field name="iban" />
+                <a href="/test_module4/belarusbank">
+                  Get salary list for belarusbank</a>
+              </group>
+            </group>
+          </page>
+        </page>
+      </field>
+    </record>
+  </data>
+</odoo>
